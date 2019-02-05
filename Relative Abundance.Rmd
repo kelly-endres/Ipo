@@ -9,7 +9,7 @@ This worksheet will be to look at relative species abundances.
 
 ```{r}
 rm(list = ls())
-setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance")
+setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance/Ipo")
 
 library(ggplot2)
 ```

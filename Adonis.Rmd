@@ -23,7 +23,7 @@ library(reshape2)
 
 ```{r setup, include=FALSE}
 rm(list = ls())
-setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance")
+setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance/Ipo")
 
 #inport data
 ipo1997 <- read.csv("data_1997.csv") #1997

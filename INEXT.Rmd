@@ -1,0 +1,295 @@
+---
+title: "iNEXT analysis"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+So my plan of action here is to look at my data using iNEXT. This package provides simple functions to compure and plot sample-size and coverage-based raretaction and extrapolation of species diversity individual based (abundance) data or sampling unit based (incident) data. 
+
+One of the important analyses that I need to run will use the total visitation by species comparing each year, in particular drought vs. non-drought years. This looks at diversity of visitors measured by species richness. Its important to use iNEXT as it uses rarefaction and takes into acound differences in sampling effort (of which there are many). At the moment we are only doing individual-based rarefaction as this would cover everything we need to know about differences in species richness. 
+
+First, I need to get the visitation totals from each year in the correct format for iNEXT analysis. THis requires creating a dataframe for each year with total species visitation in decreasing order. The dataframes are then merged together. I also need to input the data in the format that I want. 
+
+Data input 
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(tidyverse)
+library(reshape2)
+library(iNEXT)
+```
+
+
+```{r setup, include=FALSE}
+rm(list = ls())
+setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance")
+
+#inport data
+ipo1997 <- read.csv("data_1997.csv") #1997
+ipo1998 <- read.csv("data_1998.csv") #1998
+ipo2001 <- read.csv("data_2001.csv") #2001
+ipo2012 <- read.csv("data_2012.csv") #2012
+ipo2018 <- read.csv("data_2018.csv") #2018
+```
+
+Organize data
+
+```{r}
+##1997
+#treat year as factor
+ipo1997$Year <- as.factor(ipo1997$Year)
+#create dataframe with site, visitor, and total visits
+ipo1997 <- cbind.data.frame(mdtsite = ipo1997$Site, mdtvisitor = ipo1997$Visitor, total.vis = ipo1997$Total.Visits)
+#organize data by site then visitor
+data_tvis_1997 <- dcast(ipo1997, mdtsite ~ mdtvisitor, sum)
+#make data into matrix
+data_tvis_1997 <- data.matrix(data_tvis_1997) 
+#rename rows as sites
+row.names(data_tvis_1997) <- c("P", "T", "V")
+#delete first column where sites were previously 
+colnames(data_tvis_1997)[1] <- "1" #rename
+data_tvis_1997 <- data_tvis_1997[, -1] #delete
+
+##1998
+#treat year as factor
+ipo1998$Year <- as.factor(ipo1998$Year)
+#create dataframe with site, visitor, and total visits
+ipo1998 <- cbind.data.frame(mdtsite = ipo1998$Site, mdtvisitor = ipo1998$Visitor, total.vis = ipo1998$Total.Visits)
+#organize data by site then visitor
+data_tvis_1998 <- dcast(ipo1998, mdtsite ~ mdtvisitor, sum)
+#make data into matrix
+data_tvis_1998 <- data.matrix(data_tvis_1998) 
+#rename rows as sites
+row.names(data_tvis_1998) <- c("P", "T", "V")
+#delete first column where sites were previously 
+colnames(data_tvis_1998)[1] <- "1" #rename
+data_tvis_1998 <- data_tvis_1998[, -1] #delete
+
+##2001
+#treat year as factor
+ipo2001$Year <- as.factor(ipo2001$Year)
+#create dataframe with site, visitor, and total visits
+ipo2001 <- cbind.data.frame(mdtsite = ipo2001$Site, mdtvisitor = ipo2001$Visitor, total.vis = ipo2001$Total.Visits)
+#organize data by site then visitor
+data_tvis_2001 <- dcast(ipo2001, mdtsite ~ mdtvisitor, sum)
+#make data into matrix
+data_tvis_2001 <- data.matrix(data_tvis_2001) 
+#rename rows as sites
+row.names(data_tvis_2001) <- c("P", "T", "V")
+#delete first column where sites were previously 
+colnames(data_tvis_2001)[1] <- "1" #rename
+data_tvis_2001 <- data_tvis_2001[, -1] #delete
+
+
+##2012
+#treat year as factor
+ipo2012$Year <- as.factor(ipo2012$Year)
+#treat NAs as 1
+ipo2012[is.na(ipo2012)] <- 1
+#create dataframe with site, visitor, and total visits
+ipo2012 <- cbind.data.frame(mdtsite = ipo2012$Site, mdtvisitor = ipo2012$Visitor, total.vis = ipo2012$Total.Visits)
+#organize data by site then visitor
+data_tvis_2012 <- dcast(ipo2012, mdtsite ~ mdtvisitor, sum)
+#make data into matrix
+data_tvis_2012 <- data.matrix(data_tvis_2012) 
+#rename rows as sites
+row.names(data_tvis_2012) <- c("Avery Picnic Slope", "Avery Picnic Upper", "Back of Baldy Bend", "Baldy Lunch", "Bellview Bench", "Bellview View", "billy's Hilly Lower", "billy's Hilly Upper", "Emerald Lake Lower", "Emerald Lake Upper", "End of Gothic Hill", "Kebler Pass", "Long Lake Parking Lot 1", "Long Lake Parking Lot 2", "Long Lake Parking Lot 3", "Long Lake Parking Lot 4", "Max Field Meadow Lower", "Max Field Meadow Upper", "Ol' Dusty Road", "Rosy Point Lower", "Rosy Point Upper", "Schofield/Vera Falls", "Slate River 2", "Up on dat hill", "Vera Falls", "Vera Falls 2")
+#delete first column where sites were previously 
+colnames(data_tvis_2012)[1] <- "1" #rename
+data_tvis_2012 <- data_tvis_2012[, -1] #delete
+
+##2018
+#treat year as factor
+ipo2018$Year <- as.factor(ipo2018$Year)
+#create dataframe with site, visitor, and total visits
+ipo2018 <- cbind.data.frame(mdtsite = ipo2018$Site, mdtvisitor = ipo2018$Visitor, total.vis = ipo2018$Total.Visits)
+#organize data by site then visitor
+data_tvis_2018 <- dcast(ipo2018, mdtsite ~ mdtvisitor, sum)
+#make data into matrix
+data_tvis_2018 <- data.matrix(data_tvis_2018) 
+#rename rows as sites
+row.names(data_tvis_2018) <- c("Avery Slope", "Behind Rustler's Gultch", "Bellview Bench Park", "Bellview View", "East River Overlook", "Rosy Point", "Vera Falls")
+#delete first column where sites were previously 
+colnames(data_tvis_2018)[1] <- "1" #rename
+data_tvis_2018 <- data_tvis_2018[, -1] #delete
+```
+
+
+
+
+Notes
+- Going forward I will create a new Rmarkdown file which combines all of the years together and loses the scratch work above. 
+
+```{r}
+
+#1997
+# make dataframe for 1997
+tvisbun97 <- t(data_tvis_1997) #transpose data
+tvisbun97 <- as.data.frame(tvisbun97) #made into dataframe
+# sum row totals in new dataframe
+totals97 <- as.data.frame(rowSums(tvisbun97))
+#add 0s until totals97 has 9 rows like the others 
+totals97 <- rbind(totals97, list(0)) #wasp
+totals97 <- rbind(totals97, list(0)) #nectar robber
+totals97 <- rbind(totals97, list(0)) #other fly
+totals97 <- rbind(totals97, list(0)) #small insect
+#sort in decreasing order
+totals97<- sort(totals97$`rowSums(tvisbun97)`, decreasing=TRUE)
+
+#1998
+# make dataframe for 1998
+tvisbun98 <- t(data_tvis_1998) #transpose data
+tvisbun98 <- as.data.frame(tvisbun98) #made into dataframe
+# sum row totals in new dataframe
+totals98 <- as.data.frame(rowSums(tvisbun98))
+#add 0s until totals97 has 9 rows like the others 
+totals98 <- rbind(totals98, list(0)) #wasp
+totals98 <- rbind(totals98, list(0)) #nectar robber
+totals98 <- rbind(totals98, list(0)) #butterfly
+totals98 <- rbind(totals98, list(0)) #small insect
+#sort in decreasing order
+totals98<- sort(totals98$`rowSums(tvisbun98)`, decreasing=TRUE)
+
+
+#2001
+# make dataframe for 2001
+tvisbun01 <- t(data_tvis_2001) #transpose data
+tvisbun01 <- as.data.frame(tvisbun01) #made into dataframe
+tvisbun01 <- tvisbun01[-c(2),] #removes Gnat column 
+tvisbun01 <- tvisbun01[-c(2),] #removes Hawkmoth column (since we have yet to decide what to do with that)
+# sum row totals in new dataframe
+totals01 <- as.data.frame(rowSums(tvisbun01))
+#add 0s until totals01 has 9 rows like the others 
+totals01 <- rbind(totals01, list(0)) #nectar robber
+totals01 <- rbind(totals01, list(0)) #butterfly
+totals01 <- rbind(totals01, list(0)) #small insect
+#sort in decreasing order
+totals01 <- sort(totals01$`rowSums(tvisbun01)`, decreasing=TRUE)
+
+#2012
+# make dataframe for 2012
+tvisbun12 <- t(data_tvis_2012) #transpose data
+tvisbun12 <- as.data.frame(tvisbun12) #made into dataframe
+tvisbun12 <- tvisbun12[-c(3),] #removes Gnat column (since we have yet to decide what to do with that)
+# sum row totals in new dataframe
+totals12 <- as.data.frame(rowSums(tvisbun12))
+#add 0s until totals12 has 9 rows like the others
+totals12 <- rbind(totals12, list(0)) #nectar robber
+#sort in decreasing order
+totals12 <- sort(totals12$`rowSums(tvisbun12)`, decreasing=TRUE)
+
+#2018
+# make dataframe for 2018
+tvisbun18 <- t(data_tvis_2018) #transpose data
+tvisbun18 <- as.data.frame(tvisbun18)
+## sum row totals in new dataframe
+totals18 <- as.data.frame(rowSums(tvisbun18))
+#add 0s until totals18 has 9 rows like the others
+totals18 <- rbind(totals18, list(0)) #solitary bee
+totals18 <- rbind(totals18, list(0)) #Nectar robber
+#sort in decreasing order
+totals18 <- sort(totals18$`rowSums(tvisbun18)`, decreasing=TRUE)
+
+```
+
+Now that individual dataframes are created for each year, its necessary to combine them into one dataframe.
+
+```{r}
+both <- cbind(totals97, totals98,  totals01, totals12, totals18)
+```
+
+Next is the actual iNEXT analysis. There is some reformating needed here to make drought and non-drought clearer. I will likely rename each of the years (i.e. totals96 -> 1996) moving forward.
+
+
+```{r}
+#iNEXT analysis using individual based rarefaction
+out2 <- iNEXT(both, q=c(0, 1), datatype="abundance", endpoint=NULL)
+
+# R/E curves, separating by "site""
+allplot <- ggiNEXT(out2, type=1, facet.var="site") + 
+   xlim(0,300) 
+
+print(allplot) +
+  facet_wrap(~site, nrow = 2)
+```
+
+
+
+
+Separating the grouping by diversity orders of Hill numbers, 0 and 1, allows us to see all the curves together for each analysis. 
+
+We will need to decide if we will keep each Hill number or only use a certain one.
+*We have decided to only use Hill numbers 0 (species richness) and 1 (Shannon's diversity)
+
+```{r}
+# R/E curves, separating by "order""
+order <- ggiNEXT(out2, type=1, facet.var="order") + 
+  xlim(0,450)
+ 
+print(order)
+```
+
+Summary: These figures show higher diversity in the years 2018 and 2012. Utlizing a richness index (q=0), the three non-drought years (1997, 1998, 2001) show overlap, with slight overlap with 2018. Utlizing the Shannon's index (q=1), both 2012 and 2018 show higher diversity than the non-drought years.
+
+Now that this is complete we will run an analysis with only two groups, drought and non-drought. This gets at our overall question in species richness difference between the two. Again, we expect higher species richness in drought years than non-drought years, indicating broader niche breadth. 
+
+First the drought and non-drought data must be combined into a dataframe. From the "both" dataframe that contains all groups two new dataframes will be created that sum the drought data (2012 and 2018) and then the non-drought data (1997, 1998, 2001). 
+
+
+
+```{r}
+bothdf <- as.data.frame(both)
+
+##create drought dataframe
+#sum column totals into new dataframe
+drought <- transform(bothdf, drought = totals12 + totals18)
+drought <- drought[, -c(1:5)]
+drought <- as.data.frame(drought)
+
+##create nondrought dataframe
+#sum column totals into new dataframe
+nondrought <- transform(bothdf, nondrought = totals97 + totals98 + totals01)
+nondrought <- nondrought[, -c(1:5)]
+nondrought <- as.data.frame(nondrought)
+
+#combine into one dataframe
+two <- cbind(drought, nondrought)
+```
+
+Now for the iNEXT analysis of drought vs. nondrought
+
+This first graph will show the rarefaction for each group individually. 
+```{r}
+#iNEXT
+out <- iNEXT(two, q=c(0, 1), datatype="abundance", endpoint=NULL)
+
+final <- ggiNEXT(out, type=1, facet.var="site") + 
+  xlim(0,300)
+
+print(final)
+```
+
+This plot shows the data separated by Hill number, 0 and 1. 
+```{r}
+# R/E curves, separating by "order""
+order2 <- ggiNEXT(out, type=1, facet.var="order") + 
+  xlim(0,300)
+ 
+print(order2)
+```
+
+Summary: This graph shows significant differences in diversity between drought and non-drought years using both richness (q=0) and Shannon's diversity (q=1). Greater species diversity was shown in drought years using both metrics.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 rm(list = ls())
-setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance")
+setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance/Ipo")
 ```
 
 

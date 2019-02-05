@@ -1,0 +1,62 @@
+Year,Date,Observers,Site,Observation,Time,Visitor,Flowers per Plant,Total Visits,plant#,Visit Date,week,Obs period,obstime,Visitor spp.,Tofday
+1997,2,1,P,Hour,60,Hummingbird,2,2,21,2-Jul-97,1,3:30-4:30,1.5,hbird(female),3
+1997,7,1,P,Nine,90,Hummingbird,32,6,21,14-Jul-97,3,11:45-1:15,1.5,Hbird(female),2
+1997,8,1,P,Other,65,Hummingbird,32,5,21,15-Jul-97,3,3:45-4:50,1.08,Hbird(female),3
+1997,10,1,P,Nine,90,Hoverfly,26,1,21,22-Jul-97,4,12:15-1:45,1.5,Hoverfly,2
+1997,15,1,P,Nine,90,Hoverfly,19,8,21,1-Aug-97,5,3:20-5:50,1.5,Hoverfly,3
+1997,3,1,P,Nine,90,Butterfly,2,1,22,3-Jul-97,1,12:45-2:15,1.5,butterfly,2
+1997,9,1,P,Nine,90,Hoverfly,24,10,22,16-Jul-97,3,8:15-9:45,1.5,Hoverfly,1
+1997,7,1,P,Nine,90,Solitary bee,24,1,22,14-Jul-97,3,11:45-1:15,1.5,helictus,2
+1997,7,1,P,Nine,90,Hummingbird,24,6,22,14-Jul-97,3,11:45-1:15,1.5,Hbird(female),2
+1997,8,1,P,Other,65,Hummingbird,24,14,22,15-Jul-97,3,3:45-4:50,1.08,Hbird(female),3
+1997,15,1,P,Nine,90,Hoverfly,14,2,22,1-Aug-97,5,3:20-5:50,1.5,Hoverfly,3
+1997,2,1,P,Hour,60,Hummingbird,7,4,23,2-Jul-97,1,3:30-4:30,1.5,hbird(female),3
+1997,7,1,P,Nine,90,Solitary bee,11,3,23,14-Jul-97,3,11:45-1:15,1.5,helictus,2
+1997,7,1,P,Nine,90,Solitary bee,27,1,24,14-Jul-97,3,11:45-1:15,1.5,helictus,2
+1997,7,1,P,Nine,90,Hummingbird,27,6,24,14-Jul-97,3,11:45-1:15,1.5,Hbird(female),2
+1997,8,1,P,Other,65,Hummingbird,27,21,24,15-Jul-97,3,3:45-4:50,1.08,Hbird(female),3
+1997,4,1,P,Nine,90,Hoverfly,11,4,26,7-Jul-97,2,12:30-2:00,1.5,Hoverfly,2
+1997,9,1,P,Nine,90,Hoverfly,12,2,27,16-Jul-97,3,8:15-9:45,1.5,Hoverfly,1
+1997,9,1,P,Nine,90,Hoverfly,13,4,28,16-Jul-97,3,8:15-9:45,1.5,Hoverfly,1
+1997,7,1,P,Nine,90,Solitary bee,13,1,28,14-Jul-97,3,11:45-1:15,1.5,helictus,2
+1997,7,1,P,Nine,90,Hummingbird,13,6,28,14-Jul-97,3,11:45-1:15,1.5,Hbird(female),2
+1997,7,1,P,Nine,90,Hummingbird,9,4,30,14-Jul-97,3,11:45-1:15,1.5,Hbird(female),2
+1997,10,1,P,Nine,90,Solitary bee,10,1,30,22-Jul-97,4,12:15-1:45,1.5,helictus,2
+1997,5,1,P,Nine,90,Solitary bee,6,1,31,8-Jul-97,2,8:50-10:20,1.5,helictus,1
+1997,15,1,P,Nine,90,Hummingbird,12,2,31,1-Aug-97,5,3:20-5:50,1.5,Hbird(female),3
+1997,15,1,P,Nine,90,Hummingbird,8,1,34,1-Aug-97,5,3:20-5:50,1.5,Hbird(female),3
+1997,5,1,P,Nine,90,Solitary bee,18,1,35,8-Jul-97,2,8:50-10:20,1.5,helictus,1
+1997,15,1,P,Nine,90,Hummingbird,21,3,36,1-Aug-97,5,3:20-5:50,1.5,Hbird(female),3
+1997,8,1,P,Other,65,Hummingbird,10,5,38,15-Jul-97,3,3:45-4:50,1.08,Hbird(female),3
+1997,10,1,T,Nine,90,Hoverfly,7,1,1,22-Jul-97,4,8:35-10:05,1.5,Hoverfly,1
+1997,4,1,T,Nine,90,Bumblebee,12,1,2,7-Jul-97,2,8:40-10:10,1.5,B.appositus (Q),1
+1997,5,1,T,Nine,90,Bumblebee,13,9,2,8-Jul-97,2,3:20-4:50,1.5,B.appositus(Q),3
+1997,10,1,T,Nine,90,Hoverfly,11,1,2,22-Jul-97,4,8:35-10:05,1.5,Hoverfly,1
+1997,8,1,T,Nine,90,Bumblebee,10,6,3,15-Jul-97,3,8:30-20:00,1.5,B.appositus(Q),1
+1997,10,1,T,Nine,90,Hoverfly,2,1,3,22-Jul-97,4,8:35-10:05,1.5,Hoverfly,1
+1997,8,1,T,Nine,90,Bumblebee,8,1,4,15-Jul-97,3,8:30-20:00,1.5,B.appositus(Q),1
+1997,10,1,T,Nine,90,Bumblebee,11,1,4,22-Jul-97,4,8:35-10:05,1.5,B.flavifrons(w),1
+1997,10,1,T,Nine,90,Hoverfly,11,8,4,22-Jul-97,4,8:35-10:05,1.5,Hoverfly,1
+1997,3,1,T,Hour,60,Hoverfly,12,5,5,3-Jul-97,1,3:30-4:30,1.5,Hoverfly,3
+1997,5,1,T,Nine,90,Bumblebee,14,6,5,8-Jul-97,2,3:20-4:50,1.5,B.appositus(Q),3
+1997,8,1,T,Nine,90,Bumblebee,16,2,5,15-Jul-97,3,8:30-20:00,1.5,B.appositus(Q),1
+1997,5,1,T,Nine,90,Bumblebee,17,8,6,8-Jul-97,2,3:20-4:50,1.5,B.appositus(Q),3
+1997,8,1,T,Nine,90,Bumblebee,21,9,6,15-Jul-97,3,8:30-20:00,1.5,B.appositus(Q),1
+1997,10,1,T,Nine,90,Hoverfly,22,1,6,22-Jul-97,4,8:35-10:05,1.5,Hoverfly,1
+1997,4,1,T,Nine,90,Bumblebee,19,2,7,7-Jul-97,2,8:40-10:10,1.5,B.appositus (Q),1
+1997,10,1,T,Nine,90,Hoverfly,21,6,7,22-Jul-97,4,8:35-10:05,1.5,Hoverfly,1
+1997,7,1,T,Nine,90,Bumblebee,13,2,8,14-Jul-97,3,3:00-4:30,1.5,B.appositus(Q),3
+1997,10,1,T,Nine,90,Hoverfly,12,1,8,22-Jul-97,4,8:35-10:05,1.5,Hoverfly,1
+1997,5,1,T,Nine,90,Bumblebee,31,5,9,8-Jul-97,2,3:20-4:50,1.5,B.appositus(Q),3
+1997,10,1,T,Nine,90,Hoverfly,64,5,9,22-Jul-97,4,8:35-10:05,1.5,Hoverfly,1
+1997,8,1,T,Nine,90,Bumblebee,8,1,10,15-Jul-97,3,8:30-20:00,1.5,B.appositus(Q),1
+1997,8,1,T,Nine,90,Bumblebee,11,2,11,15-Jul-97,3,8:30-20:00,1.5,B.appositus(Q),1
+1997,10,1,T,Nine,90,Solitary bee,6,1,19,22-Jul-97,4,8:35-10:05,1.5,helictus,1
+1997,4,1,T,Nine,90,Solitary bee,14,4,20,7-Jul-97,2,8:40-10:10,1.5,helictus,1
+1997,7,1,T,Nine,90,Bumblebee,34,2,20,14-Jul-97,3,3:00-4:30,1.5,B.appositus(Q),3
+1997,3,1,V,Hour,60,Hoverfly,25,1,44,16-Jul-97,3,4:30-5:30,1.5,Hoverfly,3
+1997,1,1,V,Nine,90,Bumblebee,18,3,46,14-Jul-97,3,8:30-10:00,1.5,Bombus (w),1
+1997,1,1,V,Nine,90,Hoverfly,13,2,49,14-Jul-97,3,8:30-10:00,1.5,Hoverfly,1
+1997,9,1,V,Nine,90,Bumblebee,4,1,51,1-Aug-97,5,9:00-10:30,1.5,B.appositus(w),1
+1997,1,1,V,Nine,90,Hoverfly,16,5,60,14-Jul-97,3,8:30-10:00,1.5,Hoverfly,1
+1997,9,1,V,Nine,90,Hoverfly,4,4,61,1-Aug-97,5,9:00-10:30,1.5,Hoverfly,1

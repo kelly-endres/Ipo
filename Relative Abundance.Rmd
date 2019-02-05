@@ -1,0 +1,250 @@
+---
+title: "Abundance data"
+author: "Kelly Endres"
+date: "January 19, 2019"
+output: html_document
+---
+
+This worksheet will be to look at relative species abundances. 
+
+```{r}
+rm(list = ls())
+setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance")
+
+library(ggplot2)
+```
+
+First I will make a dataframe for each year with the data we need. This means creating a dataframe with year, visitor, and total visit information for each of the 9 grouped catagories - Bumblebee, Butterfly, Hummingbird, Hoverfly, Wasp, Small insect, Other fly, Nectar robber, Solitary bee - with 0 visits added for the groups that have no recorde visits in a year. 
+
+
+
+```{r}
+
+#1997
+
+#import data
+ipovar97 <- read.csv("data_1997.csv")
+
+# remove all columns but Year, Visitor, and Total.Visits
+ipovar97 <- ipovar97[, -c(2, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15, 16)]
+
+#create new dataframe (a18) that has visits per visitor group
+a97 <- aggregate(Total.Visits ~ ., ipovar97, sum)
+
+#add line for the missing groups so they are correctly identified as 0
+x97 <- as.data.frame(rbind(c(1997, "Nectar robber", 0))) #make dataframe
+colnames(x97) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x97$Visitor <- as.factor(x97$Visitor) #make visitor column factor
+a97<- rbind(a97, x97) #add line to first total dataframe
+x971 <- as.data.frame(rbind(c(1997, "Wasp", 0))) #make dataframe
+colnames(x971) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x971$Visitor <- as.factor(x971$Visitor) #make visitor column factor
+a97<- rbind(a97, x971) #add line to first total dataframe
+x972 <- as.data.frame(rbind(c(1997, "Other fly", 0))) #make dataframe
+colnames(x972) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x972$Visitor <- as.factor(x972$Visitor) #make visitor column factor
+a97 <- rbind(a97, x972) #add line to first total dataframe
+x973 <- as.data.frame(rbind(c(1997, "Small insect", 0))) #make dataframe
+colnames(x973) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x973$Visitor <- as.factor(x973$Visitor) #make visitor column factor
+a97 <- rbind(a97, x973) #add line to first total dataframe
+a97$Total.Visits <- as.numeric(a97$Total.Visits) #make Total.Visits column numeric
+a97$Year <- as.integer(a97$Year) #make Year column integer
+
+#create new column with relative species abundances
+rsa97 <- a97$Total.Visits/sum(a97$Total.Visits) #calculate relative species abundance 
+a97 <- cbind(a97, rsa97) #add column to main dataframe
+```
+
+```{r}
+#1998
+
+#import data
+ipovar98 <- read.csv("data_1998.csv")
+
+# remove all columns but Year, Visitor, and Total.Visits
+ipovar98 <- ipovar98[, -c(2, 3, 4, 5, 6, 8, 10)]
+
+#create new dataframe (a98) that has visits per visitor group
+a98 <- aggregate(Total.Visits ~ ., ipovar98, sum)
+
+#add line for the missing groups so they are correctly identified as 0
+x98 <- as.data.frame(rbind(c(1998, "Nectar robber", 0))) #make dataframe
+colnames(x98) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x98$Visitor <- as.factor(x98$Visitor) #make visitor column factor
+a98<- rbind(a98, x98) #add line to first total dataframe
+x981 <- as.data.frame(rbind(c(1998, "Wasp", 0))) #make dataframe
+colnames(x981) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x981$Visitor <- as.factor(x981$Visitor) #make visitor column factor
+a98<- rbind(a98, x981) #add line to first total dataframe
+x982 <- as.data.frame(rbind(c(1998, "Other fly", 0))) #make dataframe
+colnames(x982) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x982$Visitor <- as.factor(x982$Visitor) #make visitor column factor
+a98 <- rbind(a98, x982) #add line to first total dataframe
+x983 <- as.data.frame(rbind(c(1998, "Small insect", 0))) #make dataframe
+colnames(x983) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x983$Visitor <- as.factor(x983$Visitor) #make visitor column factor
+a98 <- rbind(a98, x983) #add line to first total dataframe
+a98$Total.Visits <- as.numeric(a98$Total.Visits) #make Total.Visits column numeric
+a98$Year <- as.integer(a98$Year) #make Year column integer
+
+#create new column with relative species abundances
+rsa98 <- a98$Total.Visits/sum(a98$Total.Visits) #calculate relative species abundance 
+a98 <- cbind(a98, rsa98) #add column to main dataframe
+```
+
+```{r}
+#2001
+
+#import data
+ipovar01 <- read.csv("data_2001.csv")
+
+# remove all columns but Year, Visitor, and Total.Visits
+ipovar01 <- ipovar01[, -c(2, 3, 4, 5, 6, 8, 10, 11)]
+
+#create new dataframe (a98) that has visits per visitor group
+a01 <- aggregate(Total.Visits ~ ., ipovar01, sum)
+a01 <- a01[- c(2, 3), ] #remove Gnat? column and Hawkmoth --> TBD FIGURE OUT WHAT TO DO
+
+#add line for the missing groups so they are correctly identified as 0
+x01 <- as.data.frame(rbind(c(2001, "Butterfly", 0))) #make dataframe
+colnames(x01) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x01$Visitor <- as.factor(x01$Visitor) #make visitor column factor
+a01<- rbind(a01, x01) #add line to first total dataframe
+x011 <- as.data.frame(rbind(c(2001, "Small insect", 0))) #make dataframe
+colnames(x011) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x011$Visitor <- as.factor(x011$Visitor) #make visitor column factor
+a01<- rbind(a01, x011) #add line to first total dataframe
+x012 <- as.data.frame(rbind(c(2001, "Nectar robber", 0))) #make dataframe
+colnames(x012) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x012$Visitor <- as.factor(x012$Visitor) #make visitor column factor
+a01<- rbind(a01, x012) #add line to first total dataframe
+row.names(a01) <- c(1, 2, 3, 4, 5, 6, 7, 8, 9) #rename rows
+a01$Total.Visits <- as.numeric(a01$Total.Visits) #make Total.Visits column numeric
+a01$Year <- as.integer(a01$Year) #make Year column integer
+
+#create new column with relative species abundances
+rsa01 <- a01$Total.Visits/sum(a01$Total.Visits) #calculate relative species abundance 
+a01 <- cbind(a01, rsa01) #add column to main dataframe
+```
+
+
+```{r}
+#2012
+
+#import data
+ipovar12 <- read.csv("data_2012.csv")
+
+# remove all columns but Year, Visitor, and Total.Visits
+ipovar12 <- ipovar12[, -c(2, 3, 4, 5, 6, 8)]
+ipovar12[is.na(ipovar12)] <- 1 #treat nas in total visits as 1 (since there was only 1 visit the number of visits wasn't put down)
+
+#create new dataframe (a12) that has visits per visitor group
+a12 <- aggregate(Total.Visits ~ ., ipovar12, sum)
+a12 <- a12[- c(3), ] #remove Gnat? column
+
+#add line for the missing groups so they are correctly identified as 0
+x12 <- as.data.frame(rbind(c(2012, "Nectar robber", 0))) #make dataframe
+colnames(x12) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x12$Visitor <- as.factor(x12$Visitor) #make visitor column factor
+a12<- rbind(a12, x12) #add line to first total dataframe
+row.names(a12) <- c(1, 2, 3, 4, 5, 6, 7, 8,  9) #rename rows
+a12$Total.Visits <- as.numeric(a12$Total.Visits) #make Total.Visits column numeric
+a12$Year <- as.integer(a12$Year) #make Year column integer
+
+#create new column with relative species abundances
+rsa12 <- a12$Total.Visits/sum(a12$Total.Visits) #calculate relative species abundance 
+a12 <- cbind(a12, rsa12) #add column to main dataframe
+
+```
+
+
+```{r}
+#2018
+
+#import data
+ipovar18 <- read.csv("data_2018.csv")
+
+# remove all columns but Year, Visitor, and Total.Visits
+ipovar18 <- ipovar18[, -c(2, 3, 4, 5, 6)]
+
+#create new dataframe (a18) that has visits per visitor group
+a18 <- aggregate(Total.Visits ~ ., ipovar18, sum)
+
+#add line for the missing groups so they are correctly identified as 0
+x18 <- as.data.frame(rbind(c(2018, "Nectar robber", 0))) #make dataframe
+colnames(x18) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x18$Visitor <- as.factor(x18$Visitor) #make visitor column factor
+a18<- rbind(a18, x18) #add line to first total dataframe
+x181 <- as.data.frame(rbind(c(2018, "Solitary bee", 0))) #make dataframe
+colnames(x181) <- c("Year", "Visitor", "Total.Visits") #rename columns to match
+x181$Visitor <- as.factor(x181$Visitor) #make visitor column factor
+a18<- rbind(a18, x181) #add line to first total dataframe
+a18$Total.Visits <- as.numeric(a18$Total.Visits) #make Total.Visits column numeric
+a18$Year <- as.integer(a18$Year) #make Year column integer
+
+#create new column with relative species abundances
+rsa18 <- a18$Total.Visits/sum(a18$Total.Visits) #calculate relative species abundance 
+a18 <- cbind(a18, rsa18) #add column to main dataframe
+```
+
+Now that each individual dataframe has been created they need to be merged together into one. 
+
+```{r}
+#rename last columns to rsa, dropping the year at the end
+colnames(a97) <- c("Year", "Visitor", "Total.visits", "rsa")
+names(a98) <- names(a97) 
+names(a01) <- names(a97)
+names(a12) <- names(a97)
+names(a18) <- names(a97)
+
+# merge dataframes
+all <- rbind(a97, a98, a01, a12, a18)
+# make year factor for easier graphing 
+all$Year <- as.factor(all$Year)
+```
+
+Graphing
+
+I'm making a simple bar plot for visualization. This is not analysis, which will be done with adonis (?) but helps to simplify the data. 
+
+This graph shows the relative species abundances for each year. Not useful except for my own visualization. 
+
+```{r}
+#plot realtive species abundances
+allplot <- ggplot(na.omit(all), aes(x=Year, y=rsa, fill=Visitor)) + #graph
+    geom_bar(stat="identity") + 
+    xlab("Year") + #x labels 
+    ylab("Relative Species Abundance") + #y labels
+    ggtitle("Abundance") #title
+
+#clean up graph
+done <- allplot + scale_fill_brewer(palette="BrBG", direction=-1) + #color
+  theme(axis.text = element_text(size = 13)) + #axis text
+  theme(axis.title = element_text(size = 15)) + #title text
+  theme(plot.title = element_text(size = 20, face = "bold")) #bold
+
+#print
+print(done)
+```
+
+This graph shows the overall abundance of each species per year. 
+
+```{r}
+#plot species abundances
+bigplot <- ggplot(na.omit(all), aes(x=Year, y=Total.visits, fill=Visitor)) + #graph
+    geom_bar(stat="identity") + 
+    xlab("Year") + #xaxis
+    ylab("Number of Visits") + #yaxis
+    ggtitle("Abundance") #title
+
+#clean up graph
+bigdone <- bigplot + scale_fill_brewer(palette="BrBG", direction=-1) + #color
+  theme(axis.text = element_text(size = 13)) + #axis text
+  theme(axis.title = element_text(size = 15)) + #title text
+  theme(plot.title = element_text(size = 20, face = "bold")) #bold
+
+#pint
+print(bigdone)
+```
+

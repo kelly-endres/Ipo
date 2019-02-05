@@ -1,0 +1,376 @@
+Year,Date,Observers,Site,Time,Observation,Visitor,Flowers per Plant,Total Visits,Visit Date
+1999,1,1,P,60,Hour,Small insect,11,2,7/5/1999
+1999,1,1,P,60,Hour,Small insect,11,2,7/5/1999
+1999,1,1,P,60,Hour,Small insect,8,1,7/5/1999
+1999,1,1,P,60,Hour,Bumblebee,8,2,7/5/1999
+1999,4,1,P,60,Hour,Hummingbird,22,1,7/12/1999
+1999,4,1,P,60,Hour,Small insect,10,1,7/12/1999
+1999,4,1,P,60,Hour,Small insect,13,1,7/12/1999
+1999,7,1,P,60,Hour,Hummingbird,6,6,7/19/1999
+1999,8,1,P,60,Hour,Hummingbird,7,6,7/21/1999
+1999,8,1,P,60,Hour,Hummingbird,12,4,7/21/1999
+1999,10,1,P,60,Hour,Hummingbird,13,6,7/26/1999
+1999,12,1,P,60,Hour,Small insect,7,9,7/30/1999
+1999,12,1,P,60,Hour,Small insect,17,7,7/30/1999
+1999,12,1,P,60,Hour,Hummingbird,15,2,7/30/1999
+1999,12,1,P,60,Hour,Small insect,6,2,7/30/1999
+1999,12,1,P,60,Hour,Small insect,6,2,7/30/1999
+1999,12,1,P,60,Hour,Hummingbird,7,5,7/30/1999
+1999,13,1,P,60,Hour,Hummingbird,12,2,8/2/1999
+1999,13,1,P,60,Hour,Small insect,16,8,8/2/1999
+1999,15,1,P,60,Hour,Hummingbird,6,3,8/6/1999
+1999,15,1,P,60,Hour,Hummingbird,15,8,8/6/1999
+1999,15,1,P,60,Hour,Hummingbird,6,3,8/6/1999
+1999,15,1,P,60,Hour,Hummingbird,19,11,8/6/1999
+1999,15,1,P,60,Hour,Hummingbird,6,6,8/6/1999
+1999,15,1,P,60,Hour,Hummingbird,3,3,8/6/1999
+1999,15,1,P,60,Hour,Hummingbird,4,3,8/6/1999
+1999,16,1,P,60,Hour,Hummingbird,25,2,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,7,5,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,21,11,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,7,6,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,4,4,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,12,9,8/9/1999
+1999,16,1,P,60,Hour,Nectar robber,12,2,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,3,4,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,13,4,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,5,2,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,2,1,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,3,1,8/9/1999
+1999,16,1,P,60,Hour,Hummingbird,7,4,8/9/1999
+1999,17,1,P,60,Hour,Hummingbird,21,6,8/11/1999
+1999,17,1,P,60,Hour,Nectar robber,21,3,8/11/1999
+1999,17,1,P,60,Hour,Nectar robber,21,5,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,4,2,8/11/1999
+1999,17,1,P,60,Hour,Nectar robber,18,5,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,18,6,8/11/1999
+1999,17,1,P,60,Hour,Nectar robber,23,16,8/11/1999
+1999,17,1,P,60,Hour,Nectar robber,23,2,8/11/1999
+1999,17,1,P,60,Hour,Nectar robber,12,2,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,12,3,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,10,4,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,3,3,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,2,2,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,3,2,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,3,2,8/11/1999
+1999,17,1,P,60,Hour,Hummingbird,4,1,8/11/1999
+1999,18,1,P,60,Hour,Nectar robber,10,4,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,15,5,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,9,1,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,16,9,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,16,3,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,20,18,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,20,18,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,7,7,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,7,1,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,13,12,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,8,4,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,14,2,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,14,9,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,13,3,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,5,5,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,4,1,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,6,2,8/13/1999
+1999,18,1,P,60,Hour,Nectar robber,5,5,8/13/1999
+1999,20,1,P,60,Hour,Nectar robber,16,2,8/17/1999
+1999,19,1,P,60,Hour,Bumblebee,16,1,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,16,9,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,6,3,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,4,1,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,4,5,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,17,9,8/17/1999
+1999,19,1,P,60,Hour,Bumblebee,17,6,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,17,40,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,18,16,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,18,31,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,6,2,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,6,10,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,6,2,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,6,5,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,5,2,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,5,4,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,14,10,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,14,11,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,12,4,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,3,7,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,11,2,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,11,5,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,17,1,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,17,9,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,15,9,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,1,1,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,1,2,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,3,2,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,3,2,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,5,8,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,5,7,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,7,3,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,7,4,8/17/1999
+1999,20,1,P,60,Hour,Nectar robber,7,3,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,7,4,8/17/1999
+1999,19,1,P,60,Hour,Nectar robber,11,4,8/17/1999
+1999,21,1,P,65,Other,Nectar robber,4,1,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,7,7,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,16,7,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,17,4,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,6,7,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,8,4,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,4,3,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,16,7,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,12,4,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,4,2,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,17,9,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,21,8,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,4,2,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,11,5,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,8,1,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,18,5,8/19/1999
+1999,21,1,P,65,Other,Nectar robber,3,1,8/19/1999
+1999,23,1,P,60,Hour,Small insect,2,1,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,6,2,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,6,2,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,14,10,8/24/1999
+1999,23,1,P,60,Hour,Small insect,14,2,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,14,7,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,13,14,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,13,11,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,9,5,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,7,3,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,7,5,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,2,1,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,10,2,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,10,11,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,9,9,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,4,11,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,4,3,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,17,11,8/24/1999
+1999,23,1,P,60,Hour,Small insect,17,13,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,17,2,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,14,12,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,14,2,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,5,3,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,1,1,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,3,1,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,4,2,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,4,2,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,16,15,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,16,8,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,13,2,8/24/1999
+1999,23,1,P,60,Hour,Nectar robber,11,8,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,11,2,8/24/1999
+1999,22,1,P,60,Hour,Nectar robber,2,1,8/24/1999
+1999,24,1,P,60,Hour,Nectar robber,9,7,8/26/1999
+1999,24,1,P,60,Hour,Nectar robber,6,4,8/26/1999
+1999,24,1,P,60,Hour,Nectar robber,6,4,8/26/1999
+1999,24,1,P,60,Hour,Nectar robber,0,2,8/26/1999
+1999,24,1,P,60,Hour,Nectar robber,6,6,8/26/1999
+1999,1,1,T,60,Hour,Bumblebee,14,1,7/5/1999
+1999,1,1,T,60,Hour,Bumblebee,7,2,7/5/1999
+1999,2,1,T,60,Hour,Bumblebee,15,2,7/7/1999
+1999,2,1,T,60,Hour,Small insect,15,2,7/7/1999
+1999,2,1,T,60,Hour,Bumblebee,17,3,7/7/1999
+1999,3,1,T,60,Hour,Small insect,15,1,7/9/1999
+1999,8,1,T,60,Hour,Bumblebee,5,3,7/22/1999
+1999,12,1,T,60,Hour,Hummingbird,9,9,7/30/1999
+1999,12,1,T,60,Hour,Hummingbird,6,2,7/30/1999
+1999,12,1,T,60,Hour,Hummingbird,11,4,7/30/1999
+1999,12,1,T,60,Hour,Hummingbird,1,1,7/30/1999
+1999,14,1,T,60,Hour,Hummingbird,19,7,8/6/1999
+1999,14,1,T,60,Hour,Small insect,2,1,8/6/1999
+1999,16,1,T,60,Hour,Nectar robber,20,15,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,20,4,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,9,1,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,9,1,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,5,1,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,5,1,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,10,5,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,10,4,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,10,1,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,12,2,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,6,1,8/9/1999
+1999,16,1,T,60,Hour,Nectar robber,8,8,8/9/1999
+1999,17,1,T,60,Hour,Nectar robber,6,3,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,23,5,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,23,7,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,3,1,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,4,2,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,4,2,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,4,2,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,3,3,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,8,2,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,6,2,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,6,2,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,1,1,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,14,4,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,14,4,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,9,1,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,3,1,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,4,1,8/11/1999
+1999,17,1,T,60,Hour,Nectar robber,4,1,8/11/1999
+1999,18,1,T,60,Hour,Nectar robber,10,3,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,25,7,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,25,2,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,25,5,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,4,3,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,4,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,4,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,6,3,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,6,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,6,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,1,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,11,3,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,11,6,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,5,2,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,5,3,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,5,2,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,9,5,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,9,5,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,5,2,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,5,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,1,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,1,5,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,31,11,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,31,2,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,8,3,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,8,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,8,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,14,5,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,14,7,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,3,2,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,3,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,1,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,1,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,1,2,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,1,1,8/13/1999
+1999,18,1,T,60,Hour,Nectar robber,1,1,8/13/1999
+1999,19,1,T,60,Hour,Nectar robber,9,3,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,8,5,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,8,1,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,1,2,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,4,2,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,4,1,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,3,1,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,8,9,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,8,4,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,14,15,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,14,20,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,9,8,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,9,6,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,11,4,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,11,3,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,8,10,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,12,7,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,5,5,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,10,11,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,10,1,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,3,1,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,7,1,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,1,2,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,32,22,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,32,4,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,4,3,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,7,5,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,25,15,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,25,23,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,5,4,8/17/1999
+1999,19,1,T,60,Hour,Nectar robber,1,1,8/17/1999
+1999,20,1,T,60,Hour,Nectar robber,1,5,8/17/1999
+1999,21,1,T,60,Hour,Nectar robber,12,2,8/19/1999
+1999,21,1,T,60,Hour,Nectar robber,5,2,8/19/1999
+1999,21,1,T,60,Hour,Small insect,4,1,8/19/1999
+1999,21,1,T,60,Hour,Small insect,14,5,8/19/1999
+1999,21,1,T,60,Hour,Small insect,8,2,8/19/1999
+1999,21,1,T,60,Hour,Nectar robber,8,2,8/19/1999
+1999,21,1,T,60,Hour,Small insect,15,3,8/19/1999
+1999,21,1,T,60,Hour,Nectar robber,15,1,8/19/1999
+1999,21,1,T,60,Hour,Nectar robber,13,9,8/19/1999
+1999,21,1,T,60,Hour,Nectar robber,15,2,8/19/1999
+1999,21,1,T,60,Hour,Small insect,10,1,8/19/1999
+1999,21,1,T,60,Hour,Small insect,9,1,8/19/1999
+1999,21,1,T,60,Hour,Nectar robber,38,11,8/19/1999
+1999,21,1,T,60,Hour,Nectar robber,21,1,8/19/1999
+1999,21,1,T,60,Hour,Nectar robber,0,2,8/19/1999
+1999,22,1,T,60,Hour,Nectar robber,3,1,8/24/1999
+1999,22,1,T,60,Hour,Nectar robber,6,1,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,3,1,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,5,1,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,7,1,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,14,11,8/24/1999
+1999,22,1,T,60,Hour,Nectar robber,7,3,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,7,1,8/24/1999
+1999,22,1,T,60,Hour,Nectar robber,2,2,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,2,2,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,26,13,8/24/1999
+1999,22,1,T,60,Hour,Nectar robber,5,1,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,8,1,8/24/1999
+1999,22,1,T,60,Hour,Nectar robber,20,4,8/24/1999
+1999,23,1,T,60,Hour,Nectar robber,1,1,8/24/1999
+1999,7,1,V,45,Other,Hummingbird,4,2,7/22/1999
+1999,7,1,V,45,Other,Hummingbird,17,7,7/22/1999
+1999,7,1,V,45,Other,Hummingbird,5,3,7/22/1999
+1999,7,1,V,45,Other,Hummingbird,8,5,7/22/1999
+1999,12,1,V,61,Hour,Hummingbird,8,3,7/30/1999
+1999,14,1,V,60,Hour,Hummingbird,10,1,8/4/1999
+1999,15,1,V,60,Hour,Nectar robber,6,1,8/8/1999
+1999,15,1,V,60,Hour,Hummingbird,1,1,8/8/1999
+1999,15,1,V,60,Hour,Hummingbird,8,5,8/8/1999
+1999,15,1,V,60,Hour,Nectar robber,3,1,8/8/1999
+1999,17,1,V,50,Other,Nectar robber,6,3,8/11/1999
+1999,17,1,V,50,Other,Nectar robber,5,1,8/11/1999
+1999,18,1,V,60,Hour,Nectar robber,6,3,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,6,3,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,17,10,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,17,5,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,17,2,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,3,3,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,3,2,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,6,1,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,5,3,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,3,2,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,3,2,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,5,2,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,1,1,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,2,2,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,10,2,8/13/1999
+1999,18,1,V,60,Hour,Small insect,10,2,8/13/1999
+1999,18,1,V,60,Hour,Hummingbird,1,1,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,1,2,8/13/1999
+1999,18,1,V,60,Hour,Nectar robber,5,6,8/13/1999
+1999,20,1,V,60,Hour,Nectar robber,4,1,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,1,1,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,3,1,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,2,1,8/17/1999
+1999,19,1,V,60,Hour,Nectar robber,11,4,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,11,10,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,5,1,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,10,1,8/17/1999
+1999,19,1,V,60,Hour,Nectar robber,2,2,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,2,2,8/17/1999
+1999,19,1,V,60,Hour,Nectar robber,1,4,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,5,2,8/17/1999
+1999,19,1,V,60,Hour,Nectar robber,3,1,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,3,3,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,4,2,8/17/1999
+1999,19,1,V,60,Hour,Nectar robber,1,1,8/17/1999
+1999,20,1,V,60,Hour,Nectar robber,7,5,8/17/1999
+1999,24,1,V,60,Hour,Nectar robber,7,2,8/24/1999
+1999,22,1,V,60,Hour,Nectar robber,4,2,8/24/1999
+1999,23,1,V,60,Hour,Nectar robber,7,2,8/24/1999
+1999,22,1,V,60,Hour,Nectar robber,8,12,8/24/1999
+1999,22,1,V,60,Hour,Nectar robber,4,2,8/24/1999
+1999,24,1,V,60,Hour,Nectar robber,12,3,8/24/1999
+1999,22,1,V,60,Hour,Nectar robber,12,9,8/24/1999
+1999,23,1,V,60,Hour,Nectar robber,12,3,8/24/1999
+1999,24,1,V,60,Hour,Nectar robber,31,6,8/24/1999
+1999,22,1,V,60,Hour,Nectar robber,15,10,8/24/1999
+1999,23,1,V,60,Hour,Nectar robber,31,6,8/24/1999
+1999,22,1,V,60,Hour,Nectar robber,2,3,8/24/1999
+1999,24,1,V,60,Hour,Nectar robber,5,8,8/24/1999
+1999,22,1,V,60,Hour,Nectar robber,4,1,8/24/1999
+1999,23,1,V,60,Hour,Nectar robber,5,2,8/24/1999
+1999,24,1,V,60,Hour,Nectar robber,1,1,8/24/1999
+1999,23,1,V,60,Hour,Nectar robber,1,1,8/24/1999
+1999,24,1,V,60,Hour,Nectar robber,3,1,8/24/1999
+1999,23,1,V,60,Hour,Nectar robber,3,1,8/24/1999
+1999,24,1,V,60,Hour,Nectar robber,6,2,8/24/1999
+1999,23,1,V,60,Hour,Nectar robber,6,2,8/24/1999

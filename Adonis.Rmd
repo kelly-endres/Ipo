@@ -1,0 +1,185 @@
+---
+title: "Adonis Analysis"
+author: "Kelly Endres"
+date: "January 22, 2019"
+output: html_document
+---
+
+NOTES
+- should the site information be kept? It doesn't seem like the analysis will be important there.
+- one of the analyses I ran looks funny, need to double check that 
+
+This set of analyses is to look at differences in community composition between drought and non-drought years. This requires construction  of community similarity/dissimilarity matrices and conducting Adonis analyses, with drought vs. nondrought as the fixed effects. Adonis is useful for this analysis as it uses strata which takes into account random effects (e.g. year) (???). We will use the Morisita-Horn index with Adonis as is is insensitve to differences in sampling effort among catagories. Therefore we can use raw data without correcting for sampling effort. 
+
+
+```{r setup, include=FALSE}
+#load packages
+library(vegan)
+library(dplyr)
+library(tidyverse)
+library(reshape2)
+```
+
+
+```{r setup, include=FALSE}
+rm(list = ls())
+setwd("/Users/kelly/OneDrive/Desktop/Kelly/Abundance")
+
+#inport data
+ipo1997 <- read.csv("data_1997.csv") #1997
+ipo1998 <- read.csv("data_1998.csv") #1998
+ipo2001 <- read.csv("data_2001.csv") #2001
+ipo2012 <- read.csv("data_2012.csv") #2012
+ipo2018 <- read.csv("data_2018.csv") #2018
+```
+
+To complete Adonis, the data from all years must be together on the same matrix. This requires loading the correct data and formatting it the same. In particular, the visitor column must be in the same order. 
+
+```{r}
+##1997
+#treat year as factor
+ipo1997$Year <- as.factor(ipo1997$Year)
+#create dataframe with site, visitor, and total visits
+ipo1997 <- cbind.data.frame(mdtsite = ipo1997$Site, mdtvisitor = ipo1997$Visitor, total.vis = ipo1997$Total.Visits)
+#organize data by site then visitor
+data_tvis_1997 <- dcast(ipo1997, mdtsite ~ mdtvisitor, sum)
+#delete site column
+colnames(data_tvis_1997)[1] <- "1" #rename
+data_tvis_1997 <- data_tvis_1997[, -1] #delete
+#rename columns
+row.names(data_tvis_1997) <- c("P", "T", "V")
+#add missing columns
+data_tvis_1997 <- cbind(data_tvis_1997, "Other fly" = c(0, 0, 0), "Nectar robber" = c(0, 0, 0), "Small insect" = c(0, 0, 0), "Wasp" = c(0, 0, 0))
+#order columns
+data_tvis_1997 <- data_tvis_1997[ , c("Butterfly", "Bumblebee", "Hoverfly", "Hummingbird", "Nectar robber", "Other fly", "Small insect", "Solitary bee", "Wasp")]
+#add year
+data_tvis_1997 <- cbind(data_tvis_1997, "Year" = c(1997, 1997, 1997))
+#add drought
+data_tvis_1997 <- cbind(data_tvis_1997, "Drought" = c("Non-drought", "Non-drought", "Non-drought"))
+
+##1998
+#treat year as factor
+ipo1998$Year <- as.factor(ipo1998$Year)
+#create dataframe with site, visitor, and total visits
+ipo1998 <- cbind.data.frame(mdtsite = ipo1998$Site, mdtvisitor = ipo1998$Visitor, total.vis = ipo1998$Total.Visits)
+#organize data by site then visitor
+data_tvis_1998 <- dcast(ipo1998, mdtsite ~ mdtvisitor, sum)
+#delete site column
+colnames(data_tvis_1998)[1] <- "1" #rename
+data_tvis_1998 <- data_tvis_1998[, -1] #delete
+#rename columns
+row.names(data_tvis_1998) <- c("P", "T", "V")
+#add missing columns
+data_tvis_1998 <- cbind(data_tvis_1998, "Butterfly" = c(0, 0, 0), "Nectar robber" = c(0, 0, 0), "Small insect" = c(0, 0, 0), "Wasp" = c(0, 0, 0))
+#order columns
+data_tvis_1998 <- data_tvis_1998[ , c("Butterfly", "Bumblebee", "Hoverfly", "Hummingbird", "Nectar robber", "Other fly", "Small insect", "Solitary bee", "Wasp")]
+#add year
+data_tvis_1998 <- cbind(data_tvis_1998, "Year" = c(1998, 1998, 1998))
+#add drought
+data_tvis_1998 <- cbind(data_tvis_1998, "Drought" = c("Non-drought", "Non-drought", "Non-drought"))
+
+##2001
+#treat year as factor
+ipo2001$Year <- as.factor(ipo2001$Year)
+#create dataframe with site, visitor, and total visits
+ipo2001 <- cbind.data.frame(mdtsite = ipo2001$Site, mdtvisitor = ipo2001$Visitor, total.vis = ipo2001$Total.Visits)
+#organize data by site then visitor
+data_tvis_2001 <- dcast(ipo2001, mdtsite ~ mdtvisitor, sum)
+#delete site column
+colnames(data_tvis_2001)[1] <- "1" #rename
+data_tvis_2001 <- data_tvis_2001[, -1] #delete
+#rename columns
+row.names(data_tvis_2001) <- c("P", "T", "V")
+#removes Gnat  andda
+data_tvis_2001 <- data_tvis_2001[ ,-c(2, 3)] 
+#add missing columns
+data_tvis_2001 <- cbind(data_tvis_2001, "Nectar robber" = c(0, 0, 0), "Small insect" = c(0, 0, 0), "Butterfly" = c(0, 0, 0))
+#order columns
+data_tvis_2001 <- data_tvis_2001[ , c("Butterfly", "Bumblebee", "Hoverfly", "Hummingbird", "Nectar robber", "Other fly", "Small insect", "Solitary bee", "Wasp")]
+#add year
+data_tvis_2001 <- cbind(data_tvis_2001, "Year" = c(2001, 2001, 2001))
+#add drought
+data_tvis_2001 <- cbind(data_tvis_2001, "Drought" = c("Non-drought", "Non-drought", "Non-drought"))
+
+##2012
+#treat year as factor
+ipo2012$Year <- as.factor(ipo2012$Year)
+#treat NAs as 1
+ipo2012[is.na(ipo2012)] <- 1
+#create dataframe with site, visitor, and total visits
+ipo2012 <- cbind.data.frame(mdtsite = ipo2012$Site, mdtvisitor = ipo2012$Visitor, total.vis = ipo2012$Total.Visits)
+#organize data by site then visitor
+data_tvis_2012 <- dcast(ipo2012, mdtsite ~ mdtvisitor, sum)
+#delete site column
+colnames(data_tvis_2012)[1] <- "1" #rename
+data_tvis_2012 <- data_tvis_2012[, -1] #delete
+#rename columns
+row.names(data_tvis_2012) <- c("Avery Picnic Slope", "Avery Picnic Upper", "Back of Baldy Bend", "Baldy Lunch", "Bellview Bench", "Bellview View", "billy's Hilly Lower", "billy's Hilly Upper", "Emerald Lake Lower", "Emerald Lake Upper", "End of Gothic Hill", "Kebler Pass", "Long Lake Parking Lot 1", "Long Lake Parking Lot 2", "Long Lake Parking Lot 3", "Long Lake Parking Lot 4", "Max Field Meadow Lower", "Max Field Meadow Upper", "Ol' Dusty Road", "Rosy Point Lower", "Rosy Point Upper", "Schofield/Vera Falls", "Slate River 2", "Up on dat hill", "Vera Falls", "Vera Falls 2")
+#removes Gnat column
+data_tvis_2012 <- data_tvis_2012[,-c(3)]
+#add missing columns
+data_tvis_2012 <- cbind(data_tvis_2012, "Nectar robber" = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+#order columns
+data_tvis_2012 <- data_tvis_2012[ , c("Butterfly", "Bumblebee", "Hoverfly", "Hummingbird", "Nectar robber", "Other fly", "Small insect", "Solitary bee", "Wasp")]
+#add year
+data_tvis_2012 <- cbind(data_tvis_2012, "Year" = c(2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012, 2012))
+#add drought
+data_tvis_2012 <- cbind(data_tvis_2012, "Drought" = c("Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought"))
+
+##2018
+#treat year as factor
+ipo2018$Year <- as.factor(ipo2018$Year)
+#create dataframe with site, visitor, and total visits
+ipo2018 <- cbind.data.frame(mdtsite = ipo2018$Site, mdtvisitor = ipo2018$Visitor, total.vis = ipo2018$Total.Visits)
+#organize data by site then visitor
+data_tvis_2018 <- dcast(ipo2018, mdtsite ~ mdtvisitor, sum)
+#delete site column
+colnames(data_tvis_2018)[1] <- "1" #rename
+data_tvis_2018 <- data_tvis_2018[, -1] #delete
+#rename columns
+row.names(data_tvis_2018) <- c("Avery Slope", "Behind Rustler's Gultch", "Bellview Bench Park", "Bellview View", "East River Overlook", "Rosy Point", "Vera Falls")
+#add missing columns
+data_tvis_2018 <- cbind(data_tvis_2018, "Nectar robber" = c(0, 0, 0, 0, 0, 0, 0), "Solitary bee" = c(0, 0, 0, 0, 0, 0, 0))
+#order columns
+data_tvis_2018 <- data_tvis_2018[ , c("Butterfly", "Bumblebee", "Hoverfly", "Hummingbird", "Nectar robber", "Other fly", "Small insect", "Solitary bee", "Wasp")]
+#add year
+data_tvis_2018 <- cbind(data_tvis_2018, "Year" = c(2018, 2018, 2018, 2018, 2018, 2018, 2018))
+#add drought
+data_tvis_2018 <- cbind(data_tvis_2018, "Drought" = c("Drought", "Drought", "Drought", "Drought", "Drought", "Drought", "Drought"))
+```
+
+The next step is to load all years together onto the same dataframe. This dataframe holds visitor data by site. 
+
+```{r}
+#combine data
+all.years <- rbind(data_tvis_1997, data_tvis_1998, data_tvis_2001, data_tvis_2012, data_tvis_2018)
+```
+
+From my understanding of Adonis, a separate dataframe is required for the other data. At the moment, this includes Year and Drought information. 
+
+```{r}
+#create dataframe
+all.des <- all.years[,-c(1:9)]
+```
+
+Lastly, the all.years dataframe should be formated as a matrix. The Drought and Year columns should be subtracted
+
+```{r}
+all.years <- all.years[,-c(5, 10, 11)]
+all.years <- as.matrix(all.years)
+```
+
+Now that the data formatting is complete I can run the actual analysis. Here we are using Morisita-Horn.
+
+```{r}
+beta <- vegdist(all.years, method = "horn")
+```
+
+There are two different tests I'm running here, differences in Drought and differences in Year. 
+```{r}
+adonis(beta ~ Year, all.des, strata = all.des$Drought, perm = 999)
+
+adonis(beta ~ Drought, all.des, strata = all.des$Year, perm = 999)
+```
+
+We have results! The problem is that I'm a bit confused about by we're getting here. For the second test, testing differences in drought stratifying by years, we obtain a p-value of 1, which is not correct. I think that I need to double check a few more things before I can talk to Berry. 
